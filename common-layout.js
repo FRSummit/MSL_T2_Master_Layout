@@ -3,19 +3,19 @@ var primary_menu_list = [
         primary_menu : "Setting & Management - Setting & Management",
         secondary_menu_list: [
             {
-                secondary_menu: "Product Management - Product Management",
+                secondary_menu: "Product Management",
                 left_icon: "./Icons/Group 1383.svg",
                 tertiary_menu_list: [
                     {
-                        tertiary_menu: "Product Management - Tertiary Menu",
+                        tertiary_menu: "Product Management",
                         left_icon: "./Icons/Group 1383.svg",
                     },
                     {
-                        tertiary_menu: "Product Management - Tertiary Menu",
+                        tertiary_menu: "Product Management",
                         left_icon: "./Icons/Group 1383.svg",
                     },
                     {
-                        tertiary_menu: "Product Management - Tertiary Menu",
+                        tertiary_menu: "Product Management",
                         left_icon: "./Icons/Group 1383.svg",
                     },
                 ]
@@ -25,15 +25,15 @@ var primary_menu_list = [
                 left_icon: "./Icons/preference_icon.svg",
                 tertiary_menu_list: [
                     {
-                        tertiary_menu: "Preference - Tertiary Menu",
+                        tertiary_menu: "Preference",
                         left_icon: "./Icons/Group 1383.svg",
                     },
                     {
-                        tertiary_menu: "Preference - Tertiary Menu",
+                        tertiary_menu: "Preference",
                         left_icon: "./Icons/Group 1383.svg",
                     },
                     {
-                        tertiary_menu: "Preference - Tertiary Menu",
+                        tertiary_menu: "Preference",
                         left_icon: "./Icons/Group 1383.svg",
                     },
                 ]
@@ -136,15 +136,15 @@ var primary_menu_list = [
                 left_icon: "./Icons/Group 1383.svg",
                 tertiary_menu_list: [
                     {
-                        tertiary_menu: "Preference - Tertiary Menu",
+                        tertiary_menu: "Preference",
                         left_icon: "./Icons/Group 1383.svg",
                     },
                     {
-                        tertiary_menu: "Preference - Tertiary Menu",
+                        tertiary_menu: "Preference",
                         left_icon: "./Icons/Group 1383.svg",
                     },
                     {
-                        tertiary_menu: "Preference - Tertiary Menu",
+                        tertiary_menu: "Preference",
                         left_icon: "./Icons/Group 1383.svg",
                     },
                 ]
@@ -158,15 +158,15 @@ var primary_menu_list = [
                 left_icon: "./Icons/Sbu_icon.svg",
                 tertiary_menu_list: [
                     {
-                        tertiary_menu: "Preference - Tertiary Menu",
+                        tertiary_menu: "Preference",
                         left_icon: "./Icons/Group 1383.svg",
                     },
                     {
-                        tertiary_menu: "Preference - Tertiary Menu",
+                        tertiary_menu: "Preference",
                         left_icon: "./Icons/Group 1383.svg",
                     },
                     {
-                        tertiary_menu: "Preference - Tertiary Menu",
+                        tertiary_menu: "Preference",
                         left_icon: "./Icons/Group 1383.svg",
                     },
                 ]
@@ -378,16 +378,28 @@ $(document).ready(function(){
         // $('.sidebar .menu-section .main-menu-ul-text').css('width', '100%');
         // $('.primary-arrow-icon').css('display', 'none');
             $(this).parent().addClass('primary-menu-text-hover');
-            console.log($(this).parent().width());
             $(this).addClass('hover-effect');
-            $(this).children().addClass('hide');
-            console.log($(this).length);
+            // if($.trim($(this).text()).length > 28) {
+                // $(this).children().addClass('hide');
+            // }
         },
         function () {
             // $('.sidebar .menu-section .main-menu-ul-text').css('width', '220px');
             // $('.primary-arrow-icon').css('display', 'block');
             $(this).parent().removeClass('primary-menu-text-hover');
             $(this).removeClass('hover-effect');
-            $(this).children().removeClass('hide');
+            // $(this).children().removeClass('hide');
         });
+
+        // $('.secondary-menu-text').parent().hover(function() {
+        //         // $(this).parent().css('width', $.trim($(this).text()).length);
+        //         console.log($(this).width());
+        //         console.log($(this).child().first().width());
+        //         $(this).children().addClass('secondary-menu-text-hover');
+        //         $(this).addClass('hover-effect');
+        //     },
+        //     function () {
+        //         $(this).children().removeClass('secondary-menu-text-hover');
+        //         $(this).removeClass('hover-effect');
+        //     });
 });
